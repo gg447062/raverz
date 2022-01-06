@@ -1,26 +1,35 @@
-@mixin flex {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-body {
-  @include flex();
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 header {
-  @include flex();
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: auto;
   top: 0;
+  z-index: 5;
 }
 
 video {
   max-width: 100%;
   height: auto;
 }
+
+img {
+  max-width: 5%;
+  height: auto;
+  transform: rotate(120deg);
+  margin-left: 15px;
+}
+
+/*# sourceMappingURL=main.css.map */

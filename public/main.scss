@@ -1,21 +1,25 @@
-body {
+@mixin flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body {
+  @include flex();
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex();
   position: absolute;
   width: 100%;
   height: auto;
   top: 0;
+  z-index: 5;
 }
 
 video {
@@ -23,4 +27,9 @@ video {
   height: auto;
 }
 
-/*# sourceMappingURL=main.css.map */
+img {
+  max-width: 5%;
+  height: auto;
+  transform: rotate(120deg);
+  margin-left: 15px;
+}

@@ -4,15 +4,30 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "style": "cd public && sass -w main.scss main.css",
+    "start-dev": "webpack serve --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-react": "^7.16.7",
+    "@walletconnect/web3-provider": "^1.7.0",
+    "babel-loader": "^8.2.3",
     "express": "^4.17.2",
     "moralis": "^0.0.183",
+    "node-polyfill-webpack-plugin": "^1.1.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-moralis": "^0.3.11",
     "sass": "^1.46.0",
-    "three": "^0.136.0"
+    "three": "^0.136.0",
+    "webpack": "^5.65.0",
+    "webpack-dev-server": "^4.7.2"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^7.0.3",
+    "webpack-cli": "^4.9.1"
   }
 }
