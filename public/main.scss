@@ -1,11 +1,21 @@
+$main_bg: #000000;
+$green: #00a218;
+$purple: #8001ff;
+
 @mixin flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   @include flex();
+  background-color: $main_bg;
+  color: $green;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -20,6 +30,7 @@ header {
   height: auto;
   top: 0;
   z-index: 5;
+  padding: 1rem;
 }
 
 video {
@@ -28,8 +39,20 @@ video {
 }
 
 img {
-  max-width: 5%;
+  position: absolute;
+  top: 25vh;
+  left: calc(50vw - 100px);
+  max-width: 200px;
   height: auto;
   transform: rotate(120deg);
   margin-left: 15px;
+}
+
+button {
+  background-color: $main_bg;
+  color: $purple;
+  border: 1px solid $purple;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2em;
 }

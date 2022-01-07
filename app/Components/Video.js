@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Main = () => {
+const Video = () => {
   return (
     <div>
       <video controls loop={true}>
@@ -10,4 +10,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Video;

@@ -1,7 +1,13 @@
+html {
+  font-size: 10px;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #000000;
+  color: #00a218;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -18,6 +24,7 @@ header {
   height: auto;
   top: 0;
   z-index: 5;
+  padding: 1rem;
 }
 
 video {
@@ -26,10 +33,22 @@ video {
 }
 
 img {
-  max-width: 5%;
+  position: absolute;
+  top: 25vh;
+  left: calc(50vw - 100px);
+  max-width: 200px;
   height: auto;
   transform: rotate(120deg);
   margin-left: 15px;
+}
+
+button {
+  background-color: #000000;
+  color: #8001ff;
+  border: 1px solid #8001ff;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=main.css.map */
