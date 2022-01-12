@@ -51,4 +51,10 @@ button {
   font-size: 2em;
 }
 
+#canvas-container {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid #8001ff;
+}
+
 /*# sourceMappingURL=main.css.map */

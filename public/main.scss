@@ -56,3 +56,12 @@ button {
   padding: 1rem;
   font-size: 2em;
 }
+
+#canvas-container {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid $purple;
+  // position: absolute;
+  // top: 0;
+  // left: 0%;
+}
