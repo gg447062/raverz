@@ -20,7 +20,6 @@ class World {
   }
 
   async init() {
-    console.log('init');
     const { miles, sid, xavier } = await loadRavers();
 
     this.loop.updatables.push(miles, sid, xavier);
