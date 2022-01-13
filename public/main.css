@@ -34,11 +34,10 @@ video {
 
 img {
   position: absolute;
-  top: 25vh;
+  top: 20vh;
   left: calc(50vw - 100px);
   max-width: 200px;
   height: auto;
-  transform: rotate(120deg);
   margin-left: 15px;
 }
 

@@ -1,13 +1,11 @@
 import { DirectionalLight, HemisphereLight } from 'three';
 
 function createLights() {
-  // const ambientLight = new HemisphereLight('white', 'darkslategrey', 5);
+  const ambient = new HemisphereLight('white', 'darkslategrey', 5);
 
-  const mainLight = new DirectionalLight('purple', 4);
-  mainLight.position.set(10, 10, 10);
-
-  // return { ambientLight, mainLight };
-  return mainLight;
+  const directional = new DirectionalLight('white', 5);
+  directional.position.set(0, -5, 5);
+  return { ambient, directional };
 }
 
 export { createLights };

@@ -9,6 +9,7 @@ const ThreeRavers = () => {
     const world = new World(container);
     await world.init();
     world.render();
+    world.start();
   }, []);
 
   return <div id="canvas-container" ref={canvasRef}></div>;

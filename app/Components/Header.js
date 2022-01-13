@@ -18,7 +18,7 @@ const Header = () => {
           connect
         </button>
       )}
-      <img src="assets/m27ravers.png" alt="ravers logo" />
+      <img src="assets/m27ravers_straight.png" alt="ravers logo" />
     </header>
   );
 };
