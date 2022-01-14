@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMoralis } from 'react-moralis';
+import Minter from './Minter';
 
 const Header = () => {
   const { user, authenticate, logout, isAuthenticated, isAuthenticating } =
@@ -12,7 +13,7 @@ const Header = () => {
   return (
     <header>
       {isAuthenticated ? (
-        <button>mint</button>
+        <Minter />
       ) : (
         <button onClick={login} disabled={isAuthenticating}>
           connect
