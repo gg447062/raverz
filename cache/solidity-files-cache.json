@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/gabrielgutierrez/Code/ravers/contracts/Ravers.sol": {
-      "lastModificationDate": 1642201609720,
-      "contentHash": "4156e2eb57ae060cf967c2e2b572272e",
+      "lastModificationDate": 1642206876737,
+      "contentHash": "14d5c812ad68955a590a53057f5b722e",
       "sourceName": "contracts/Ravers.sol",
       "solcConfig": {
         "version": "0.8.4",

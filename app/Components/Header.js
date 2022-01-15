@@ -5,6 +5,7 @@ import Minter from './Minter';
 const Header = () => {
   const { user, authenticate, logout, isAuthenticated, isAuthenticating } =
     useMoralis();
+
   async function login() {
     if (!isAuthenticated) {
       authenticate();
@@ -20,6 +21,7 @@ const Header = () => {
         </button>
       )}
       <img src="assets/m27ravers_straight.png" alt="ravers logo" />
+      {user ? <p>{user.get('ethAddress')}</p> : <p />}
     </header>
   );
 };

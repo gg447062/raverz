@@ -14,7 +14,7 @@ contract Ravers is ERC721, Ownable {
     constructor() ERC721("Ravers", "RAV") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "QmNa4iQ3vo3yKJkn1SNqeTYMYqwSCaKq6zLuGxXysr7WR5/";
+        return "QmeDizPmMPH9ymDA68EwMrq4iA36RrRzV3Zi3SAT2amQGa/";
     }
 
     function safeMint(address to) public payable {

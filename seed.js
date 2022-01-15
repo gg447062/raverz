@@ -22,8 +22,8 @@ const seed = () => {
       image: `${url}${i}.png`,
     };
 
-    fs.writeFileSync(`./metadata/${i}.json`, JSON.stringify(metadata));
-    console.log(`${i}.json written`);
+    fs.writeFileSync(`./metadata/${i}`, JSON.stringify(metadata));
+    console.log(`json file ${i} written`);
   }
 };
 
