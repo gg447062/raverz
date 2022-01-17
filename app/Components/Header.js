@@ -14,14 +14,21 @@ const Header = () => {
   return (
     <header>
       {isAuthenticated ? (
-        <Minter />
+        <Minter isAuthenticated={isAuthenticated} user={user} />
       ) : (
         <button onClick={login} disabled={isAuthenticating}>
           connect
         </button>
       )}
       <img src="assets/m27ravers_straight.png" alt="ravers logo" />
-      {user ? <p>{user.get('ethAddress')}</p> : <p />}
+      {user ? (
+        <div id="user-info">
+          <p id="address">{user.get('ethAddress')}</p>
+          <button onClick={logout}>disconnect</button>
+        </div>
+      ) : (
+        <p />
+      )}
     </header>
   );
 };

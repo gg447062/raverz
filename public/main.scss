@@ -15,7 +15,7 @@ html {
 body {
   @include flex();
   background-color: $main_bg;
-  color: $green;
+  color: $purple;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -60,7 +60,16 @@ button {
   width: 100vw;
   height: 100vh;
   border: 1px solid $purple;
-  // position: absolute;
-  // top: 0;
-  // left: 0%;
+}
+
+#address {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  width: 100px;
+  font-size: 2em;
+}
+
+#user-info {
+  @include flex();
+  width: 200px;
 }
