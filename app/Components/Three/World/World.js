@@ -1,29 +1,51 @@
 import { createCamera } from './components/camera';
-import { createLights } from './components/lights';
+import { createLights, createSpotLights } from './components/lights';
 import { createScene } from './components/scene';
-import { loadRavers } from './components/Ravers/Ravers';
+import { loadRavers, loadRaver } from './components/Ravers/Ravers';
+import { createCube, createFloor } from './components/cube';
 import { createRenderer } from './systems/renderer';
 import Resizer from './systems/Resizer';
 import { Loop } from './systems/Loop';
+import { SpotLightHelper, CameraHelper } from 'three';
 
 class World {
-  constructor(container) {
-    this.camera = createCamera();
+  constructor(container, aspect) {
+    this.camera = createCamera(aspect);
     this.lights = createLights();
+    this.spotLights = createSpotLights();
     this.scene = createScene();
     this.renderer = createRenderer();
+    this.cubes = createCube();
+    this.floor = createFloor();
     container.append(this.renderer.domElement);
-    this.scene.add(this.lights.directional, this.lights.ambient);
-    this.loop = new Loop(this.camera, this.scene, this.renderer);
+    this.helper = new CameraHelper(this.spotLights.two.shadow.camera);
 
-    this.resizer = new Resizer(container, this.camera, this.renderer);
+    this.scene.add(
+      // this.cubes.one,
+      // this.cubes.two,
+      // this.cubes.three,
+      this.lights.ambient,
+      this.spotLights.one,
+      this.spotLights.two,
+      this.spotLights.three,
+      this.floor
+      // this.helper
+    );
+    this.loop = new Loop(this.camera.camera, this.scene, this.renderer);
+
+    this.resizer = new Resizer(container, this.camera.camera, this.renderer);
   }
 
   async init() {
     const { miles, sid, xavier } = await loadRavers();
 
-    this.loop.updatables.push(miles, sid, xavier);
-    this.scene.add(miles, sid, xavier);
+    // const xavier = await loadRaver();
+    this.loop.updatables.push(sid, miles, xavier);
+    this.scene.add(sid, miles, xavier);
+
+    this.spotLights.one.target = sid;
+    this.spotLights.two.target = miles;
+    this.spotLights.three.target = xavier;
   }
 
   start() {
@@ -31,7 +53,7 @@ class World {
   }
 
   render() {
-    this.renderer.render(this.scene, this.camera);
+    this.renderer.render(this.scene, this.camera.camera);
   }
 }
 

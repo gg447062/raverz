@@ -1,6 +1,11 @@
 import { AnimationMixer } from 'three';
 
 function setupModel(data) {
+  // data.scene.traverse((node) => {
+  //   if (node.isMesh) {
+  //     node.castShadow = true;
+  //   }
+  // });
   const model = data.scene.children[0];
   const clip = data.animations[0];
 

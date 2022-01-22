@@ -6,7 +6,8 @@ const ThreeRavers = () => {
 
   useEffect(async () => {
     const container = canvasRef.current;
-    const world = new World(container);
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    const world = new World(container, aspectRatio);
     await world.init();
     world.render();
     world.start();

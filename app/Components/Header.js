@@ -20,7 +20,7 @@ const Header = () => {
           connect
         </button>
       )}
-      <img src="assets/m27ravers_straight.png" alt="ravers logo" />
+
       {user ? (
         <div id="user-info">
           <p id="address">{user.get('ethAddress')}</p>

@@ -7,6 +7,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #000000;
+  background-image: url("./assets/RAVERZbackground.png");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  background-position: 0, 10px;
   color: #8001ff;
   margin: 0;
   padding: 0;
@@ -19,26 +23,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
   position: absolute;
   width: 100%;
   height: auto;
   top: 0;
   z-index: 5;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 video {
   max-width: 100%;
   height: auto;
-}
-
-img {
-  position: absolute;
-  top: 20vh;
-  left: calc(50vw - 100px);
-  max-width: 200px;
-  height: auto;
-  margin-left: 15px;
 }
 
 button {
@@ -53,13 +50,12 @@ button {
 #canvas-container {
   width: 100vw;
   height: 100vh;
-  border: 1px solid #8001ff;
 }
 
 #address {
   overflow-x: hidden;
   text-overflow: ellipsis;
-  width: 100px;
+  width: 200px;
   font-size: 2em;
 }
 

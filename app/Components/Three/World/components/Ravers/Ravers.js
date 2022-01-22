@@ -15,12 +15,27 @@ export const loadRavers = async () => {
     loader.loadAsync('assets/models/xavierDraco2.glb'),
   ]);
 
+  const xavier = setupModel(xavierData);
+  xavier.position.set(2.5, -1.5, 2);
   const miles = setupModel(milesData);
-  miles.position.set(2.5, -1.5, 2);
+  miles.position.set(-0.5, -1.5, 0);
   const sid = setupModel(sidData);
   sid.position.set(-3, -1.5, 2);
-  const xavier = setupModel(xavierData);
-  xavier.position.set(0, -1.5, 2);
 
   return { miles, sid, xavier };
+};
+
+export const loadRaver = async () => {
+  const loader = new GLTFLoader();
+  const draco = new DRACOLoader();
+  draco.setDecoderPath('decoders/');
+  draco.preload();
+  loader.setDRACOLoader(draco);
+
+  const xavierData = await loader.loadAsync('assets/models/xavierDraco2.glb');
+  const xavier = setupModel(xavierData);
+  // xavier.position.set(0, -1.5, 0);
+  xavier.position.set(2.5, -1.5, 2);
+
+  return xavier;
 };
